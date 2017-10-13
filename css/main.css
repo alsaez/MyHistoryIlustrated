@@ -1,0 +1,586 @@
+/** Importing PERSONALIZED FONTS
+
+font-family: 'Gabriela', serif;
+font-family: 'Montserrat', sans-serif;
+
+This section is just in case Google Fonts do not respond temporary...
+We already ordered to upload the fonts in the index.html file - head section - link tab.
+**/
+@font-face {  font-family: 'Gabriela';  src: url('../fonts/gabriela/gabriela-regular.ttf') format('ttf');
+}
+
+@font-face {  font-family: 'Montserrat';  src: url('../fonts/montserrat/montserrat-regular.ttf') format('ttf');
+}
+
+/** WEB BROWSER MEASURES BEHAIVOR to include the padding measures inside the box sizing (width, heigth)  **/
+
+*, *::before, *::after {  box-sizing: border-box;  -webkit-box-sizing: border-box; /* for Chrome support */  -moz-box-sizing: border-box;  /* for Mozilla support */
+}
+
+
+/***** BASE STYLES *****/
+body{  background-color: white;
+  font-family: 'Montserrat', sans-serif;  font-size: 12px;
+  position: relative;
+}
+
+header{    height: 360px;       }
+#about{  height: auto;  max-height: 600px;  overflow: hidden;    }
+#work{   height: auto;  max-height: 600px;  overflow: hidden;   }
+#contact{  height: auto;  max-height: 600px; overflow: hidden;  }
+footer{  height: auto;  max-height: 100px;   margin: 0;      }
+
+.capitalize{  text-transform: capitalize;       }
+.uppercase{  text-transform: uppercase;         }
+
+.title{  background: #346899;  color: #fff;
+  font-family: 'Montserrat', sans-serif;  text-align: center;  line-height: 15px;
+  border: 1px solid transparent; cursor: default;
+}
+
+.title h1{  font-family: 'Gabriela', serif;  font-size: 3em;  font-weight: 700;
+text-shadow: 1px 1px 0px #2A143C;
+}
+
+.title h2{  font-size: 1.5em;  font-weight: 700;
+
+}
+
+.title h3{  font-size: 1.2em;  font-weight: 500;      }
+
+.text-container{ padding: 4%  0;
+  font-family: 'Montserrat', sans-serif;  text-align: left;
+  cursor: default;
+}
+
+.row{
+  display: flex;  flex-direction: row;  flex-wrap: nowrap;  justify-content: space-around; align-items:baseline;
+}
+
+.centered{
+  flex: 1 1 auto;
+  margin: 0  auto;
+  text-align: center;
+}
+
+.text-container h2{  margin: 0; padding-bottom: 1px;  font-size: 1.2em;  font-weight: 600;  line-height: 90%;  color: #346899;     }
+.text-container h3{  margin: 2px 0; padding-bottom: 1px;  font-size: 1.0em;  font-weight: 400;  line-height: 100%;  color: #346899;     }
+
+.content{  height: 100%;  width: 100%;
+}
+
+.content h2, .content h3, .content p{  cursor: default;    }
+
+/***** GRID *****/
+
+.container {  width:90%;  max-width: 1000px;  margin: 0 auto;  padding: 0;
+  z-index: 10;
+}
+
+.full-width { width:100%;          }
+.large-width { width: 70%;         }
+.half-width {  width:50%;         }
+.third-width { width: 30%;         }
+.quarter-width { width: 25%;         }
+.strech-width { width: 10%;         }
+
+/**** *****MENU FLOATING BAR**** *****/
+
+.menu{
+  z-index: 10; position: fixed;  top: 0; left:20;
+}
+
+.menu-bar{  overflow: hidden;
+  width: 70px;  margin: 0;
+  text-align: center;
+  background: rgba(52, 104, 153, 0.4);
+  border-radius: 0 3px 3px 0;
+  z-index: 10; position: fixed;  top: 0px; left:20;
+}
+
+.menu-bar a{  display: inline-block;
+  width: 100%;  height: 100%;  padding: 5px;  margin:0;
+  background: linear gradient(135deg, rgba(52, 104, 153, 0) 0%, rgba(52,104,153, 0.8) 100%);
+  text-decoration: none;  transition: all .4s ease-out;
+  border: 1px solid rgba(255,255,255,0.4); border-left: 0;  border-top: 1px solid rgba(255,255,255,0.6); border-radius: 0 3px 3px 0;
+  position: relative;
+}
+
+.menu-bar a::after{
+  content: "";
+  width: 100%;  height: 100%; margin: 0;
+  background: #fff;  opacity: 1;  color: #346899;
+  transform: perspective(400px) rotateY(90deg); text-align: center; transform-origin: 0 100%;  text-transform: uppercase;  transition: all .4s ease-out;
+  border: 1px solid  rgba(52, 104, 153, 0.4); border-right: 0;  border-top: 1px;border-top: 2px solid rgba(255,255,255,0.6); border-radius: 0 3px 3px 0;
+  position: absolute;  top: 0;  left: 70px;
+}
+
+.menu-bar a:nth-child(1)::after{
+  content: "Home";
+  padding: 25% 0;
+  font-family: 'Montserrat', sans-serif; font-size: 1em;  font-weight: 600;  line-height: 100%;
+}
+
+.menu-bar a:nth-child(2)::after{
+  content: "About";
+  padding: 25% 0;
+  font-family: 'Montserrat', sans-serif; font-size: 1em;  font-weight: 600;  line-height: 100%;
+}
+
+.menu-bar a:nth-child(3)::after{
+  content: "Work";
+  padding: 25% 0;
+  font-family: 'Montserrat', sans-serif; font-size: 1em;  font-weight: 600;  line-height: 100%;
+}
+
+.menu-bar a:nth-child(4)::after{
+  content: "Contact";
+  padding: 25% 0;
+  font-family: 'Montserrat', sans-serif; font-size: 1em;  font-weight: 600;  line-height: 100%;
+}
+
+.menu-bar a:hover{  /*opacity: 1;
+  border-bottom: 2px solid #fff;*/
+  transform: translateX(-70px);
+}
+
+.menu-bar a:hover::after{
+  opacity: 1;
+  transform: perspective(400px) rotateY(0deg) scale(1);
+}
+
+.icon{ width:35px;  height:35px;     }
+
+
+/**** *****HEADER***** ****/
+
+#presentation{  height: 65%;  margin: 0px;
+  background: url(../img/photos/photo-miami.png);  background-repeat: no-repeat;  background-position: center;
+  text-align: center;
+}
+
+#lang{  margin: 0 5px 0 0;  padding: 5px 0 0 0;
+  text-align: right;
+}
+
+#en{  z-index: 20;  position:relative;  left:1%; cursor: default;
+}
+
+#es{  opacity: 0.6;
+  z-index: 10;
+}
+
+#es:hover{  opacity: 1;
+  z-index: 30;
+}
+
+#name{  background: none;
+  font-weight: bold;
+}
+
+#name span, #slogan span{  font-family: 'Gabriela', sans-serif;  font-size: 1em;  font-weight: bold;
+  color: #ffc857;  /*f3b700, faa300, f2af29, f6ae2d, fe9000, *//*f7a9a8, ef798a*/
+}
+
+#slogan h2{
+  text-shadow: none;
+}
+
+#slogan span{  color: #f3b700;
+   font-size: 0.95em;
+}
+
+#brand-container{  height: 35%;
+  text-align: center;
+}
+
+#logo{  width: 8%;  min-width: 80px;  margin-top:-40px;
+  border: 3px solid #fff;  border-radius: 50%;
+}
+
+#slogan{  padding-bottom: 10px;
+  background: none;  color: #346899;
+  font-size: 1.2em;
+}
+
+/**** *****ABOUT*** *****/
+
+#about-layout{
+  overflow: hidden; display: flex;  flex-direction: row;  flex-wrap: nowrap;
+  background: #dfdfdf;
+}
+
+#ab-img-side{  flex: 1 1 auto;
+  background: url(../img/photos/photo-desk.png);  background-size: cover; background-repeat: no-repeat;  background-position: center;
+}
+
+#ab-content-side{  flex: 1 1 auto;  display: block;
+  padding: 2%;
+}
+
+#ab-content{
+  width: 94%;
+  height: 94%;  margin: auto; margin-top: 15px;  margin-bottom: 5px;  padding: 3%;
+  background: #fff;
+  text-align: center;
+  border-radius: 3px;
+}
+
+#first-row{
+  display: flex;  flex-direction: row;  flex-wrap: nowrap;  align-items: center;
+}
+
+.first-column{
+  flex: 0 1 auto; display: flex; flex-direction: column;  flex-wrap: nowrap;  align-items: flex-start; justify-content: flex-start;
+  margin: 0;  padding: 0;
+}
+
+.first-column img{
+  flex: 0 1 auto;
+  width: 50px;  height: 50px;
+  margin: 0; margin-bottom: 10px;  padding: 0;
+}
+
+#first-row  .text-container{
+  width: 60%;  margin: 0 5px;  padding: 0 5px;
+  font-family: 'Gabriela', serif;  font-size: 1em;  font-weight: 400;  letter-spacing: 0.5px;  word-spacing: -0.5px;  text-align: justify;
+}
+
+#first-row  .text-container  p{
+  padding: 5px;
+}
+
+#first-row  .img-container{
+  width: 30%;
+}
+
+#personal-photo{
+  width:100%;
+}
+
+#second-row{
+  display: flex;  flex-direction: row;  flex-wrap: nowrap;  align-items: center;
+  margin: 10px 0;
+  position: relative;
+}
+
+#second-row  .first-column {
+  display: flex;  flex-direction: column;  flex-wrap: nowrap;  justify-content: center;
+  padding: 10px 0;
+}
+
+#second-row  .first-column a{
+  display: block;
+  margin: 0;  padding: 0;
+  text-decoration: none;
+  border: 0;
+}
+
+#second-row  .first-column a img{
+  display: block;
+  margin: 2px 0;  padding: 0;
+  border: 2px solid #346899; border-radius: 2px 0 0 2px;
+  z-index: 5;
+  position: relative;
+}
+
+#second-row  .first-column a img:active{
+  border-right: 2px solid #fff;
+}
+
+#second-row .text-container{  overflow: hidden;
+  width: 88%; height: 100%;  margin: 0;  padding: 0;
+  border: 2px solid #346899;  border-radius: 3px;
+  position: absolute; top: 0;  left: 48px;
+  z-index: 0;
+}
+
+#second-row .text-container .text-box{
+  height: 100%;  margin: 0;  padding: 10px;
+  text-align: justify;
+}
+
+#ref-resume{
+  margin: 5px auto;  padding: 0;
+}
+
+#ref-resume  a{
+  display: flex;  flex-direction: row;  flex-wrap: nowrap;  justify-content: center; align-items: center;
+  color:#346899;
+  font-family: 'Montserrat', sans-serif;  font-size: 1.5em;  font-weight: 600;  text-decoration: none;
+}
+
+#ref-resume  img{
+  width: 25px;  height: 25px;
+}
+
+/**** *****WORK*** *****/
+
+#work-layout{
+  /*background: url(../img/photos/desk-background.png);  background-size: cover; background-repeat: no-repeat;  background-position: center;*/
+  /* The problem with the background is that we lost parts of the image once the window's dimentions changes. Attending responsive design */
+  overflow: hidden;  position: relative;
+  /* Setting the absolute position of the childs to the relative father's position*/
+}
+
+#work-layout img{  /*  Not use display flex in the father (work-layout) cause chrome act rare with the image's redimention*/
+  /* The image has originally the same width and heigth of the section, that's why next 2 properties works well to redimention the image at the window's dimentions   */
+  max-width: 100%;   height: auto; vertical-align: top;
+}
+
+#project-side{
+  overflow: hidden;  height: 100%;  margin: 0;
+  position: absolute;  top: 0;  left: 0;  padding-left: 10px;
+}
+
+#project-side .project-view{
+  width: 60%;  height: 68%;  margin: auto;  margin-top: 7%;
+  background: #cecece;
+  text-align: center;
+  border: 1px solid white;  border-radius: 3px;
+}
+
+#project-side .project-view  img{
+  width: auto;  max-width: 100%;  height: 100%;
+  text-align: center;
+}
+
+#project-description{  overflow: auto;
+  width: 60%;  height: 12%;  margin: auto;  margin-top: 4%; margin-bottom: 1%;
+  background:  rgba(52, 104, 153, 0.6);
+  text-align: justify;
+  border: 2px solid #cecece;  border-radius: 3px;
+}
+
+#project-description  p{
+  padding: 0 10px;
+  color: #fff;
+}
+
+#listview-side{  overflow: hidden;
+  height: 100%; margin: 0;
+  position: absolute;  left: 60%; top: 0;
+}
+
+#listview-side  .listview{  overflow: hidden;
+  display: flex;  flex-direction: column;  flex-wrap: nowrap;  justify-content: space-between; align-items: stretch;
+  width: 95%;  height: 70%;  margin: 10% 5%;  padding: 0;
+  border: 3px solid #346899;
+}
+
+#listview-side .listview  li{
+  flex: 1 1 auto;  display: flex;  flex-direction: row;  align-items: flex-start;
+  list-style: none;
+  width: 100%;  height: 25%;  min-height: 40px;  margin: 0;
+  border-bottom: 1px solid #346899;
+}
+
+#listview-side .listview  a{
+  display: flex;  flex-direction: row;  align-items: flex-start;
+  width: 100%;  height: 100%;  margin: 0;  padding: 3%;
+  text-decoration: none;
+  cursor:pointer;
+}
+
+#listview-side .listview  li a img{  display: block;
+  width: 45px;  height: 45px;
+  background: white;
+  border: 1px solid #346899;
+}
+
+#listview-side  .listview  li a .text-container{ flex: 1 1 auto;
+  display: flex;  flex-direction: column; flex-wrap: nowrap; align-items: flex-start;  justify-content: flex-start;
+  margin: 0 0 0 5%;
+}
+
+#listview-side .text-container h2,
+#listview-side .text-container h3{
+    cursor: pointer;
+}
+
+#challenge{
+  background: #346899;
+  opacity: 0.8;
+}
+
+#challenge .text-container h2,
+#challenge .text-container h3{
+    color: #fff; line-height: 100%;
+}
+/*
+
+.grid-wrapper{
+  display: inline-block;
+  width: 100%;  max-width: 100%;
+  background: rgba(255,244,147,0.8);  color: #346899;
+}
+
+.grid-wrapper .project{
+  display: inline-block;
+  width: 30%;  min-height: 300px;  margin-right: 3%;  margin-bottom: 3.5%;  vertical-align: top;
+  position: relative;
+}
+
+.grid-wrapper .project img{
+    display: block;  min-width: 100%;
+}
+
+.grid-wrapper .project  .grid-thumb-image{
+  display: inline-block;  width: 100%;  margin-bottom: 0px;
+}
+
+.grid-thumb-image a{
+  text-decoration: none;
+  border: 0;
+}
+
+.grid-thumb-image a img{
+  max-width: 100%;  height: auto;
+  border: 0;
+}
+
+.grid-wrapper .project  .grid-cats{
+  background: #444;
+  position: absolute;  top: 5px;  left: 10px;
+}
+
+.grid-wrapper .project  .grid-text{
+  font-size: 1em;  word-wrap: break-word;
+}
+
+.grid-wrapper .project  .grid-text  .entry-title{
+  margin: 10px 0;
+  color: #346899;
+  font-size: 1.5em;  line-height: 1.4; font-weight: 600;
+}
+
+.grid-wrapper .project  .grid-text .grid-date{
+  color: #346899;
+  font-size: 1em;  letter-spacing: 1px;
+}
+
+
+*/
+/**** *****CONTACT*** *****/
+
+#contact-layout{  overflow: hidden;  display: flex;  flex-direction: row;  flex-wrap: wrap;
+  background: #dfdfdf;
+}
+
+#ct-img-side{  flex: 1 1 auto;
+  background: url(../img/photos/photo-handshake.png);  background-size: cover; background-repeat: no-repeat;  background-position: center;
+}
+
+#interaction-side{  flex: 1 1 auto;
+  display: block;
+  text-align: right;
+}
+
+#contact-form{  display: inline-block;
+  width: 80%; min-width: 240px; margin: 25px 10px 30px 0;  padding: 20px 0 0 0;
+  background: #fff;
+  border: 2px solid transparent; border-radius: 3px;
+}
+
+#form-send{  display: flex; flex-direction: row; flex-wrap: wrap; justify-content:space-around; align-items: baseline;
+  width: auto;  margin: 10px 50px 0 50px;
+}
+
+#form-send textarea{  width: 100%; min-width: 100%;  max-width: 100%;  height: 100px;  min-height: 100px;  max-height: 200px;  margin-bottom: 15px;
+}
+
+#form-send input[type="text"],
+#form-send input[type="email"],
+#form-send textarea{ flex: 1 1 auto;  padding-left: 3px; margin: 5px;
+  color: #346899;
+  font-size: 1em;  line-height: 20px;
+  border: 1px solid #cecece;  border-radius: 2px;
+}
+
+#form-send input[type="text"]{  width: 50%;  height: 25px;  margin-left: 5px;}
+#form-send input[type="email"]{  width: 50%;  height: 25px; margin-right: 5px;  margin-bottom: 15px;}
+
+#form-send input:focus,
+#form-send textarea:focus { border: 2px solid #346899;    }
+
+#form-send .logo{ flex: 1 1 auto;
+  width: 30px; height: 30px; margin-right: 5px;
+  position: relative; top: 9px;
+}
+
+#form-send label{  font-weight: 500;
+  color: #346899;
+}
+
+#form-send .button{
+  width: 60px;  margin: 10px auto 0 auto;    padding: 0;
+  color: #fff;   background-color: #346899;
+  font-size: 25px; line-height: 28px; text-align: center;
+  border: 2px solid #346899;  border-radius: 5px;
+  cursor: pointer;
+}
+
+#form-send .button:hover{
+  font-size: 27px;
+}
+
+
+#social-media{  display: flex; flex-direction: row; flex-wrap: nowrap; justify-content: center; align-items: flex-end;
+  width: auto;  padding: 0 10px 0 0; margin: 0 0 10px 0;
+  position: relative; bottom:-30px;
+}
+
+#social-media a{  flex: 0 1 auto;
+  margin-bottom: 10px;  margin: 0 5px;
+}
+
+#social-media a i{
+  background: #346899;
+  padding: 8px;
+  color: #fff;
+  font-size: 18px;
+  border: 2px solid #346899;  border-radius: 50%;
+  position:relative; bottom: 3px;
+}
+
+#social-media a img{
+  background: #346899;
+  border-radius: 50%;
+}
+
+#social-media  a i:hover{  font-size: 17px;  border-style: outset; }
+#social-media  a img:hover{  border: 2px solid #346899; border-style: outset;  }
+
+/**** *****FOOTER*** *****/
+
+#footer-layout{  overflow: hidden;  display: flex;  flex-direction: row;  flex-wrap: wrap;
+  margin: 0;
+}
+
+#work-links{  flex: 1 1 auto;
+  background: #346899;
+}
+
+#work-links .links{  display: flex; flex-direction: row; flex-wrap: nowrap; justify-content:flex-end;
+  width: 100%; min-width: 240px; padding: 5px 0; padding-right: 20%;
+}
+
+#work-links .links a{  display: block;
+  width: 30px; height: 30px;  margin: 7px;  padding: 1px;
+  color: #fff;
+  font-size: 20px;  text-align: center;
+  border-radius: 3px;
+}
+
+#behance i{  font-size: 19px;    }
+
+#work-links  .links  a:hover{  color: #346899;  background: #fff;      }
+
+#personal-message{  flex: 1 1 auto;
+  margin: auto; padding: 0;  padding-top:  5px; padding-bottom: 4px;
+  color: #ffc857;
+}
+
+#copyrights{ padding: 5px;
+  border-top: 2px solid #fff;
+}
