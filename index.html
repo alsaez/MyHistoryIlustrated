@@ -1,42 +1,32 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" dir="ltr">
     <head>
         <meta charset="utf-8">
         <!-- USING VIEWPORT FOR RESPONSIVE DESIGN -->
         <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
         <!-- DEFINING THE WEBPAGE TITLE -->
-        <title>Anisley SV | Portfolio</title>
+        <title>ASVweb|Web design & development </title>
+
         <!-- FAVICON SETTING MULTIPLE SIZES -->
         <link rel="shortcut icon" type="image/x-icon" href="img/favicon/favicon-blue-white.ico">
-        <!--
-        <link rel="apple-touch-icon-precomposed" sizes="57x57" href="http://img/faviconapple-touch-icon-57x57.png" />
-        <link rel="apple-touch-icon-precomposed" sizes="72x72" href="http://img/faviconapple-touch-icon-72x72.png" />
-        <link rel="apple-touch-icon-precomposed" sizes="120x120" href="http://img/faviconapple-touch-icon-120x120.png" />
-        <link rel="apple-touch-icon-precomposed" sizes="152x152" href="http://img/faviconapple-touch-icon-152x152.png" />
-        <link rel="icon" type="image/png" href="img/favicon/favicon-96x96.png" sizes="96x96" />
-        <link rel="icon" type="image/png" href="img/favicon/favicon-32x32.png" sizes="32x32" />
-        <link rel="icon" type="image/png" href="img/favicon/favicon-16x16.png" sizes="16x16" />
-        <link rel="icon" type="image/png" href="img/favicon/favicon-128.png" sizes="128x128" />
-        <meta name="application-name" content="ASV | Portfolio"/>
-        <meta name="msapplication-TileColor" content="#FFFFFF" />
-        <meta name="msapplication-square150x150logo" content="mstile-150x150.png" />
-        -->
 
         <!-- GOOGLE REFERENCE FOR PERSONALIZED FONTS -->
         <link href="https://fonts.googleapis.com/css?family=Gabriela" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,700,900" rel="stylesheet">
+
         <!-- CLEARING STYLES FROM BROWSERS -->
         <link rel="stylesheet" href="css/normalize.css">
         <!-- FONT AWESOME REFERENCE FOR ICONS -->
         <link rel="stylesheet" href="css/font-awesome.min.css">
-        <!-- LINKING MY OWN STYLES -->
+  	    <!-- LINKING MY OWN STYLES -->
         <link rel="stylesheet" href="css/main.css">
+
     </head>
     <body>
           <div class="container">
           <div class="menu strech-width">
+            <!--<a href="#" data-toggle="dropdown"><i class="fa fa-bars"></i></a>-->
             <nav  class="menu-bar">
-              <!--<a href="#" data-toggle="dropdown"><i class="fa fa-bars"></i></a>-->
               <a href="#presentation" id="home-ref"><img class="icon" src="img/icons/icon-home.png" alt="Home icon referring presentation section"></a>
               <a href="#about" id="about-ref"><img class="icon" src="img/icons/icon-about.png" alt="Women icon referring about section"></a>
               <a href="#work" id="work-ref"><img class="icon" src="img/icons/icon-work.png" alt="Laptop icon referring work section"></a>
@@ -44,27 +34,25 @@
             </nav>
           </div>
           <header>
-            <div class="full-width" id="presentation">
+            <div itemscope itemtype="http://schema.org/Organization" class="full-width" id="presentation">
               <div id="lang">
-                  <a href="#" id="en"><img class="icon" src="img/icons/icon-en.png" alt="EN icon referring to english language"></a>
-                  <a href="#" id="es"><img class="icon" src="img/icons/icon-es.png" alt="ES icon referring to english language"></a>
+                  <a rel="alternate" href="#" hreflang="en" id="en"><img class="icon" src="img/icons/icon-en.png" alt="EN icon referring to english language"></a>
+                  <a rel="alternate" href="es/index.html" lang="es" hreflang="es" id="es"><img class="icon" src="img/icons/icon-es.png" alt="ES icon referring to english language"></a>
               </div>
-                  <div class="title" id="name">
-                    <h1>Anisley SV</h1>
-                    <h2><span class="capitalize"> web designer & developer</span></h2>
-                </div>
+              <div class="title" id="name">
+                  <h1><span itemprop="founder">Anisley SV</span></h1>
+                  <h2><span class="capitalize"> web designer & developer</span></h2>
               </div>
+            </div>
             <div class="full-width" id="brand-container">
-                  <img src="img/logo/logo-blue-white.png" alt="Logo ASV personal brand" id="logo">
+                  <img itemprop="logo" src="img/logo/logo-blue-white.png" alt="Logo ASV personal brand" id="logo">
                   <div class="title" id="slogan">
                     <h2 class="uppercase">growing with each <span>challenge</span></h2>
                   </div>
             </div>
           </header>
           <section class="full-width" id="about">
-              <div class="title">
-                    <h2 class="uppercase">about</h2>
-              </div>
+              <h2 class="title uppercase">about</h2>
               <div class="content" id="about-layout">
                 <div class="half-width"  id="ab-img-side"></div>
                 <div class="half-width"  id="ab-content-side">
@@ -102,8 +90,8 @@
                           </div>
                   				<div class="quarter-width centered">
                             <img class="icon" src="img/icons/icon-pencil.png" alt="PENCIL icon"/>
-                            <h3>Ease Converting Designs into Code</h3>
-                            <p>Trustly to convert a designer’s PSD into a pixel-perfect match webpage.</p>
+                            <h3>Easy Coding From Designs</h3>
+                            <p>Trustly convert a designer’s PSD into a pixel-perfect match webpage.</p>
                   				</div>
                   			</div></div>
                         <div class="text-box" id="experience"><p>When graduated I worked as professor a few years. Once I moved to United States I found difficult to get a job. I was unamployed but It helped me listen my interior voice claiming to rescue the sleeping passion for technology. </p>
@@ -118,137 +106,128 @@
               </div>
             </section>
           <section class="full-width" id="work">
-              <div class="title">
-                    <h2 class="uppercase">work</h2>
-              </div>
+              <h2 class="title uppercase">work</h2>
               <div class="content" id="work-layout">
-                <img src="img/photos/desk-background.png" alt="background image simulating a personal desktop">
+                <img src="img/photos/desk-background.png">
                 <div class="large-width" id="project-side">
-                  <div class="project-view"><img src="img/works/set-social-gray.png" alt="Image amplified of the selected project" class="project-img" id="project-img"></div>
-                  <!--<div id="project-description">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit.</p>
-                  </div>-->
-                </div>
-                <div class="third-width" id="listview-side">
-                  <ul class="listview">
-                    <li class="project">
-                      <a href="#work"  id="project-1">
-                      <img id="img1" class="icon" src="img/works/bc-small.png" alt="Small image representation for project">
-                      <div class="text-container">
-                        <h2>Bussiness card</h2>
-                        <h3>Brand design, Adobe Indesing</h3>
-                      </div>
-                      </a>
-                    </li>
-                    <li class="project">
-                      <a href="#work"  id="project-2">
-                      <img id="img2" class="icon" src="img/works/set-social-small.png" alt="Small image representation for project">
-                      <div class="text-container">
-                        <h2>Set of icons</h2>
-                        <h3>Graphic design, Adobe Illustrator</h3>
-                      </div>
-                      </a>
-                    </li>
-                    <li class="project">
-                      <a href="#work" id="project-3">
-                      <img id="img3" class="icon" src="img/works/resume-small.png" alt="Small image representation for project">
-                      <div class="text-container">
-                        <h2>Resume</h2>
-                        <h3>Visual design, Adobe Indesign</h3>
-                      </div>
-                      </a>
-                    </li>
-                    <li class="project" id="challenge">
-                      <a href="#contact">
-                      <img class="icon"  src="img/logo/logo-trans-blue.png" alt="Small image representation for project">
-                      <div class="text-container">
-                        <h2>Next Challenge...</h2>
-                        <h3>Set it your self!</h3>
-                      </div>
-                      </a>
-                    </li>
-                  </ul>
-                </div>
-                <!--
-                <div class="grid-wrapper">
-                  <div id="project-1" class="project" style="height: 300px;">
-                    <a class="grid-thumb-image" href="#" title="10 Free WordPress Theme Collections You Need to See">
-                      <img src="" class="attachment-paperback-grid-thumb size-paperback-grid-thumb wp-post-image" alt="" srcset="" sizes="(max-width: 375px) 100vw, 375px" width="375" height="250">
-                    </a>
-                    <div class="grid-cats">
-                      <a href="#">Main Category</a>
-                    </div>
-                    <div class="grid-text">
-                        <h2 class="entry-title">
-                          <a href="#" rel="bookmark">10 Free WordPress Theme Collections You Need to See</a>
-                        </h2>
-                        <div class="grid-date">
-                          Made for <a href="#" title="Made for Customer's Name" rel="customer">Customer's name</a>
-                          <span>on</span>
-                          <span class="date">October 8, 2017</span>
-                          <span class="sponsored-text-post"></span>
+                  <div class="project-view">
+                        <img src="img/works/set-social-gray.png" alt="Image amplified of the selected project" id="project-img">
+                        <!-- The Modal -->
+                        <div id="myModal" class="modal">
+                          <!-- The Close Button -->
+                          <span class="close">&times;</span>
+                          <!-- Modal Content (The Image) -->
+                          <img class="modal-content" id="myImg">
+                          <!-- Modal Caption (Image Text) -->
+                          <div id="caption"></div>
                         </div>
-                    </div>
                   </div>
-                  <div id="project-2" class="project" style="height: 300px;">
-                    <a class="grid-thumb-image" href="#" title="10 Free WordPress Theme Collections You Need to See">
-                      <img src="" class="attachment-paperback-grid-thumb size-paperback-grid-thumb wp-post-image" alt="" srcset="" sizes="(max-width: 375px) 100vw, 375px" width="375" height="250">
-                    </a>
-                    <div class="grid-cats">
-                      <a href="#">Main Category</a>
-                    </div>
-                    <div class="grid-text">
-                        <h2 class="entry-title">
-                          <a href="#" rel="bookmark">10 Free WordPress Theme Collections You Need to See</a>
-                        </h2>
-                        <div class="grid-date">
-                          Made for <a href="#" title="Made for Customer's Name" rel="customer">Customer's name</a>
-                          <span>on</span>
-                          <span class="date">October 8, 2017</span>
-                          <span class="sponsored-text-post"></span>
+                  </div>
+                  <div class="third-width" id="listview-side">
+                    <ul class="listview" id="projectList">
+                      <!-- Controls -->
+                       <!--<a class="control"><img class="small-icon"  src="img/icons/icon-up.png" alt="icon to list previous project"></a>-->
+                       <li class="project">
+                        <a href="#work">
+                        <img class="icon" src="img/works/logo-alternatives.png" alt="Small image representation for project">
+                        <div class="text-container">
+                          <h2>ASV LOGO ALTERNATIVES</h2>
+                          <h3>Brand Design and Graphic Design skills, Adobe Illustrator</h3>
                         </div>
-                    </div>
-                  </div>
-                  <div id="project-3" class="project" style="height: 300px;">
-                    <a class="grid-thumb-image" href="#" title="10 Free WordPress Theme Collections You Need to See">
-                      <img src="" class="attachment-paperback-grid-thumb size-paperback-grid-thumb wp-post-image" alt="" srcset="" sizes="(max-width: 375px) 100vw, 375px" width="375" height="250">
-                    </a>
-                    <div class="grid-cats">
-                      <a href="#">Main Category</a>
-                    </div>
-                    <div class="grid-text">
-                        <h2 class="entry-title">
-                          <a href="#" rel="bookmark">10 Free WordPress Theme Collections You Need to See</a>
-                        </h2>
-                        <div class="grid-date">
-                          Made for <a href="#" title="Made for Customer's Name" rel="customer">Customer's name</a>
-                          <span>on</span>
-                          <span class="date">October 8, 2017</span>
-                          <span class="sponsored-text-post"></span>
+                        </a>
+                      </li>
+                      <li class="project">
+                        <a href="#work">
+                        <img class="icon" src="img/works/bc-regular.png" alt="Small image representation for project">
+                        <div class="text-container">
+                          <h2>REGULAR BUSSINESS CARDS</h2>
+                          <h3>Brand Design skill, Adobe InDesing, Adobe Photoshop</h3>
                         </div>
-                    </div>
+                        </a>
+                      </li>
+                      <li class="project">
+                       <a href="#work">
+                       <img class="icon" src="img/works/bc-professional.png" alt="Small image representation for project">
+                       <div class="text-container">
+                         <h2>PROF. BUSSINESS CARD</h2>
+                         <h3>Brand Design skill, Adobe InDesing, Adobe Photoshop</h3>
+                       </div>
+                       </a>
+                     </li>
+                      <li class="project">
+                        <a href="#work">
+                        <img class="icon" src="img/works/set-social-gray.png" alt="Small image representation for project">
+                        <div class="text-container">
+                          <h2>SET OF SOCIAL ICONS</h2>
+                          <h3>Graphic Design skills, Adobe Illustrator, Adobe InDesing</h3>
+                        </div>
+                        </a>
+                      </li>
+                      <li class="project">
+                        <a href="#work">
+                        <img class="icon" src="img/works/set-tech-gray.png" alt="Small image representation for project">
+                        <div class="text-container">
+                          <h2>SET OF TECHNICAL ICONS</h2>
+                          <h3>Graphic Design skills, Adobe Illustrator, Adobe InDesing</h3>
+                        </div>
+                        </a>
+                      </li>
+                      <li class="project">
+                        <a href="#work">
+                        <img class="icon" src="img/works/resume.png" alt="Small image representation for project">
+                        <div class="text-container">
+                          <h2>PROFESSIONAL RESUME</h2>
+                          <h3>Visual Design skills, Adobe InDesign, Adobe Illustrator</h3>
+                        </div>
+                        </a>
+                      </li>
+                      <li class="project">
+                        <a href="#work">
+                        <img class="icon" src="img/works/wireframe.png" alt="Small image representation for project">
+                        <div class="text-container">
+                          <h2>ASV PORTFOLIO WIREFRAME</h2>
+                          <h3>Brand Design and Visual Design skills, Adobe CC</h3>
+                        </div>
+                        </a>
+                      </li>
+                    <li class="newProject" id="challenge">
+                        <a href="#contact">
+                        <img class="icon"  src="img/logo/logo-trans-blue.png" alt="Small image representation for project">
+                        <div class="text-container">
+                          <h2>Next Challenge...</h2>
+                          <h3>Set it your self!</h3>
+                        </div>
+                        </a>
+                      </li>
+                    </ul>
                   </div>
-                </div>
-              -->
               </div>
           </section>
           <section class="full-width" id="contact">
-              <div class="title">
-                    <h2 class="uppercase">contact</h2>
-              </div>
+              <h2 class="title uppercase">contact</h2>
               <div class="content" id="contact-layout">
                 <div class="half-width" id="interaction-side">
                   <div id="contact-form">
-                    <form action=""  method="post" id="form-send">
-                      <label for='name'>From: </label>
-                      <input type='text' placeholder="John Doe" name='fullName'  id='fullName' required>
-                      <input type='email' pattern="^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$"  placeholder="user@server.domain" name='email' id="email"  required>
-                      <!--Another RegExp pattern: ^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$  -->
-                      <label for='email'>To: <img class="logo" title="anisley.sv@gmail.com"  src="img/logo/logo-trans-blue.png" alt="Logo image for brand as destinatary">
-                      </label>
-                      <textarea id="sms"  name="sms" placeholder="Message"></textarea>
-                      <button name="button" id="btn" class="button" type="submit"><i class="fa fa-envelope-o"></i></button>
+                    <form method="post" id="gform" data-email="anisleysv@gmail.com"
+  action="https://script.google.com/macros/s/AKfycby3-VG9CEpv6CNp9xld_Dul1d-eeCaXlwYb6_C4/exec">
+                        <label for='name'>From: </label>
+                        <input type='text' placeholder="John Doe" name='name'  id='fullName' required>
+                        <input type='email' placeholder="user@server.domain" name='email' id="email"  pattern="^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$" required>
+                        <!--Another RegExp pattern: ^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$  -->
+                        <span id="email-invalid" style="display:none;"> Must be a valid display address </span>
+                        <label for='email'>To: <img class="logo" title="anisley.sv@gmail.com"  src="img/logo/logo-trans-blue.png" alt="Logo image for brand as destinatary">
+                        </label>
+                        <textarea id="sms"  name="message" placeholder="Message" rows="10"></textarea>
+                        <button name="button" id="btn" class="button" type="submit"><i class="fa fa-envelope-o"></i></button><!--or use fa fa-envelope-o -->
                     </form>
+                    <!-- Thankyou Message People See when they submit the form: -->
+                      <div class="text-container centered" style="display:none;" id="thankyou_message">
+                        <br> <br>
+                        <h2><em>Thanks for getting in touch! </em> </h2> <br> <br>
+                        <h3 class="uppercase">I will get back to you soon!</h3> <br> <br> <br>
+                        <a id="reload" class="button" href="#contact" onClick="window.location.reload()"><i class="fa fa-paper-plane"></i>&nbsp;</a>
+                      </div>
+                    <!-- END -->
                     <div id="social-media">
                         <a class="slack" href="https://asv-workspace.slack.com" target="_blank"><i class="fa fa-slack"></i></a>
                         <a class="freelancer" href="https://www.freelancer.com/u/alsaez" target="_blank"><img class="icon" src="img/icons/icon-freelancer.png" alt="Freelancer icon"></a>
@@ -263,11 +242,11 @@
             <div class="full-width" id="footer-layout">
               <div class="half-width" id="work-links">
                 <div class="links">
-                  <a id="linkedin" href="https://www.linkedin.com/in/anisley-sv/" target="_blank"><i class="fa fa-linkedin"></i></a>
+                  <a id="linkedin" href="https://www.linkedin.com/in/asv-profile/" target="_blank"><i class="fa fa-linkedin"></i></a>
                   <a id="twitter" href="https://twitter.com/anisley_sv"  target="_blank"><i class="fa fa-twitter"></i></a>
-                  <a id="behance" href="https://www.behance.net/anisleysv23d6"  target="_blank"><i class="fa fa-behance"></i></a>
+                  <a id="behance" href="https://www.behance.net/anisleysv"  target="_blank"><i class="fa fa-behance"></i></a>
                   <a id="github" href="https://github.com/anisleysv" target="_blank"><i class="fa fa-github-alt"></i></a>
-                  <a id="stack-overflow" href="https://stackexchange.com/users/11808914/anisley-s-v?tab=accounts" target="_blank"><i class="fa fa-stack-overflow"></i></a>
+                  <a id="stack-overflow" href="https://es.stackoverflow.com/users/60385/anisley-s-v" target="_blank"><i class="fa fa-stack-overflow"></i></a>
                 </div>
               </div>
               <div class="half-width title" id="personal-message">
@@ -279,7 +258,12 @@
             </div>
           </footer>
         </div>
+        <!--JavaScript at end of body for optimized loading-->
+        <!-- LINKING JQUERY AND OWN SCRIPTS-->
+         <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+         <script type="text/javascript" src="js/main.js"></script>
+        <!-- Submit the Contact Form to Google Using "AJAX" -->
+         <script data-cfasync="false" type="text/javascript"  src="js/form-submission-handler.js"></script>
 
-        <script src="js/main.js"  type="text/javascript"></script>
     </body>
 </html>
