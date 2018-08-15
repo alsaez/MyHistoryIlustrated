@@ -35,9 +35,9 @@ html{
   --general-ft: 'Montserrat', sans-serif;
 
   --xl-font: calc(0.6vw + 6em);
-  --large-font: calc(0.6vw + 1em);
-  --medium-font: calc(0.6vw + 0.7em);
-  --small-font: calc(0.6vw + 0.4em);
+  --large-font: calc(0.6vw + 0.9em);
+  --medium-font: calc(0.6vw + 0.6em);
+  --small-font: calc(0.6vw + 0.3em);
 }
 
 /***** BASE STYLES *****/
