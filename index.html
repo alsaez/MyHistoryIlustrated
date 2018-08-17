@@ -24,7 +24,7 @@
     </head>
     <body>
           <div class="container">
-          <div class="menu strech-width">
+          <div class="menu strech-width" id="main-menu">
             <!--<a href="#" data-toggle="dropdown"><i class="fa fa-bars"></i></a>-->
             <nav  class="menu-bar">
               <a href="#presentation" id="home-ref"><img class="icon" src="img/icons/icon-home.png" alt="Home icon referring presentation section"></a>
@@ -52,7 +52,7 @@
             </div>
           </header>
           <section class="full-width" id="about">
-              <h2 class="title uppercase">about</h2>
+              <h2 class="sect uppercase">about</h2>
               <div class="content" id="about-layout">
                 <div class="half-width"  id="ab-img-side"></div>
                 <div class="half-width"  id="ab-content-side">
@@ -62,51 +62,48 @@
                         <img class="icon" src="img/logo/logo-asv.png" alt="ASV image for brand representation">
                         <img class="icon" src="img/logo/logo-trans-blue.png" alt="Logo image for brand representation">
                       </div>
-                      <div class="text-container">
-                        <p>Hi! I’m an engineer in Information Technology with experience in higher education. I became a web developer, compromised to deliver projects with high customers satisfaction.</p>
-                      </div>
-                      <div class="img-container">
-                        <img src="img/photos/photo-personal.png" id="personal-photo"  alt="Personal photo">
+                      <div class="quarter-width second-column" id="small-cv">
+                        <p>Hi! I’m an engineer in Information Technology with teaching experience. I became web developer, compromised to deliver projects with high customers satisfaction.</p>
+                          <img src="img/photos/photo-personal.png" id="personal-photo"  alt="Personal photo">
                       </div>
                     </div>
                     <div class="full-width" id="second-row">
-                      <div class="strech-width first-column">
-                        <a href="#academic"><img class="icon" src="img/icons/icon-academic.png" alt="Graduation icon for academic section"></a>
-                        <a href="#skills"><img class="icon"  src="img/icons/icon-skills.png" alt="Brain interrogation sign icon for skills section"></a>
-                        <a href="#experience"><img class="icon"  src="img/icons/icon-experience.png" alt="Suitcase icon for work experience section"></a>
+                      <div class="strech-width first-column" id="small-menu">
+                        <a><img class="icon m-item selected" src="img/icons/icon-academic.png" alt="Graduation icon for academic section"></a>
+                        <a><img class="icon m-item"  src="img/icons/icon-skills.png" alt="Brain interrogation sign icon for skills section"></a>
+                        <a><img class="icon m-item"  src="img/icons/icon-experience.png" alt="Suitcase icon for work experience section"></a>
                       </div>
                       <div class="text-container">
-                        <div class="text-box" id="academic"><p>My journey into tech started with a bachelor degree in Information Technology earned in <a href="http://uci.cu/en" target="_blank">UCI</a>, Cuba. I never went far from technology, even if I didn't worked directly as engineer after graduation. </br></br>I keeped improving technical skills. My most recent postgraduated courses with certificate earned are Professional Web Design @ Udemy.com and HTML&amp;CSS @ Skillcrush.com</p></div>
+                        <div class="text-box" id="academic"><p>My journey into tech started with a Bachelor degree in Information Technology earned in <a href="http://uci.cu/en" target="_blank">UCI</a>, Cuba. I never went far from technology, even if I didn't worked directly as engineer after graduation. </br> </br>I keeped improving technical skills. My most recent postgraduated courses with certificate earned are Professional Web Design @Udemy.com and HTML&amp;CSS @Skillcrush.com</p></div>
                         <div class="text-box" id="skills"><div class="full-width row">
                   				<div class="quarter-width centered">
                             <img class="icon" src="img/icons/icon-html.png" alt="HTML icon"/>
-                            <h3>Hand-Coded HTML</h3>
+                            <h3 class="column-title">Hand-Coded HTML</h3>
                             <p>My focus is writing clean, well-formatted, semantic HTML5.</p>
                           </div>
                   				<div class="quarter-width centered">
                             <img class="icon" src="img/icons/icon-css.png" alt="CSS icon"/>
-                            <h3>Well-Organized CSS</h3>
+                            <h3 class="column-title">Well-Organized CSS</h3>
                             <p>I pride myself on writing CSS that is clean and fast to load.</p>
                           </div>
                   				<div class="quarter-width centered">
                             <img class="icon" src="img/icons/icon-pencil.png" alt="PENCIL icon"/>
-                            <h3>Easy Coding From Designs</h3>
+                            <h3 class="column-title">Easy Coding From Designs</h3>
                             <p>Trustly convert a designer’s PSD into a pixel-perfect match webpage.</p>
                   				</div>
                   			</div></div>
-                        <div class="text-box" id="experience"><p>When graduated I worked as professor a few years. Once I moved to United States I found difficult to get a job. I was unamployed but It helped me listen my interior voice claiming to rescue the sleeping passion for technology. </p>
-                          <p>With just a few courses online, I was inlove again. Now I’ve made a full switch to front-end development, where I can use my organization skills and eye for detail to write clean, elegant code.</p></div>
+                        <div class="text-box" id="experience"><p>When graduated I worked as professor a few years. Once I moved to United States I found difficult to get a job. I was unamployed but It helped me listen my interior voice claiming to rescue the sleeping passion for technology. </br></br> With just a few courses online, I was inlove again. Now I’ve made a full switch to front-end development, where I can use my organization skills and eye for detail to write clean, elegant code.</p></div>
                       </div>
                     </div>
                     <div id="ref-resume">
-                      <a href="doc/resume.pdf" class="uppercase" target="blank">Resume<img class="icon" src="img/icons/icon-download.png" alt="Download icon for resume document"></a>
+                      <a href="doc/resume.pdf" class="dwload uppercase" target="blank">Resume<img class="icon" src="img/icons/icon-download.png" alt="Download icon for resume document"></a>
                     </div>
                   </div>
                 </div>
               </div>
             </section>
           <section class="full-width" id="work">
-              <h2 class="title uppercase">work</h2>
+              <h2 class="sect uppercase">work</h2>
               <div class="content" id="work-layout">
                 <img src="img/photos/desk-background.png">
                 <div class="large-width" id="project-side">
@@ -124,9 +121,9 @@
                   </div>
                   </div>
                   <div class="third-width" id="listview-side">
+                   <!-- Controls -->
+                   <!--<a class="control"><img class="small-icon" src="img/icons/icon-up.png" alt="icon to list previous project"></a>-->
                     <ul class="listview" id="projectList">
-                      <!-- Controls -->
-                       <!--<a class="control"><img class="small-icon"  src="img/icons/icon-up.png" alt="icon to list previous project"></a>-->
                        <li class="project">
                         <a href="#work">
                         <img class="icon" src="img/works/logo-alternatives.png" alt="Small image representation for project">
@@ -204,7 +201,7 @@
               </div>
           </section>
           <section class="full-width" id="contact">
-              <h2 class="title uppercase">contact</h2>
+              <h2 class="sect uppercase">contact</h2>
               <div class="content" id="contact-layout">
                 <div class="half-width" id="interaction-side">
                   <div id="contact-form">
@@ -229,7 +226,7 @@
                       </div>
                     <!-- END -->
                     <div id="social-media">
-                        <a class="slack" href="https://asv-workspace.slack.com" target="_blank"><i class="fa fa-slack"></i></a>
+                        <a class="slack" href="https://asv-workspace.slack.com" target="_blank"><img class="icon" src="img/icons/icon-slack.png" alt="Freelancer icon"></a>
                         <a class="freelancer" href="https://www.freelancer.com/u/alsaez" target="_blank"><img class="icon" src="img/icons/icon-freelancer.png" alt="Freelancer icon"></a>
                         <a class="upwork" href="https://www.upwork.com/signup/contact-contractor/id/~01e3855103ecf9dbc5/va/cpp" target="_blank"><img class="icon" src="img/icons/icon-upwork.png" alt="Upwork icon"></a>
                     </div>
