@@ -12,6 +12,8 @@ var modal = document.getElementById('myModal'); // Get the modal
 var modalImg = document.getElementById("myImg"); // Get the image to set the modal
 var captionText = document.getElementById("caption"); // Get the Modal caption
 var span = document.getElementsByClassName("close")[0]; // Get the <span> element that closes the modal
+var mainMenu = document.getElementById("main-menu"); // Get the main menu to display none in modal state
+var secondaryMenu = document.getElementById("small-menu"); // Get the secondary menu to display none in modal state
 
 /***************Function for Slider**********************************************************/
 function updateSlider()
@@ -25,7 +27,7 @@ function updateSlider()
 			current = 0;
 		}
 	  sliderDiv.src = ilList[current].children[0].firstElementChild.src;
-		sliderDiv.alt = "PROJECT: " + ilList[current].children[0].children[1].children[0].innerHTML + ". Used " + ilList[current].children[0].children[1].children[1].innerHTML+" ...";
+		sliderDiv.alt = "PROJECT: " + ilList[current].children[0].children[1].children[0].innerHTML + "." + "<br>" +"Used " + ilList[current].children[0].children[1].children[1].innerHTML+" ...";
 
 		var myElem = document.getElementsByClassName("active");
 		if(myElem.length!=0) myElem[0].classList.remove("active");
@@ -42,6 +44,8 @@ document.addEventListener('DOMContentLoaded', updateSlider());
 sliderDiv.onclick = function(){
 		//stop the slider timeout
 		clearTimeout(ctrlTime);
+		mainMenu.style.display = "none";
+		secondaryMenu.style.display = "none";
 		// Get the image and insert it inside the modal
     modal.style.display = "block";
     modalImg.src = this.src;
@@ -52,6 +56,8 @@ sliderDiv.onclick = function(){
 /********Function to close the modal when the user clicks on <span> (x) **************************************/
 span.onclick = function() {
   modal.style.display = "none";
+	mainMenu.style.display = "block";
+	secondaryMenu.style.display = "block";
 	updateSlider();
 }
 
@@ -85,6 +91,34 @@ ul.onclick = function(event) {
 		}
 	}
 }
+
+/************************ Code to manage the style of secondary menu when a menu item is selected and update the text-container content******************************/
+secondaryMenu.onclick = function(event) {
+    var target;
+		//Get the different div contents of the text-container
+		var contents = document.getElementsByClassName("text-box"); // Get all the divs with class="text-box" inside the text-container
+		//Testing: alert(event.target.parentElement.tagName);
+		// Get the img tag of item clicked inside the secondaryMenu
+		if(event.target.parentElement.tagName != "A") target = event.target.firstElementChild;
+		else target = event.target;
+    //Testing: alert(target.tagName)
+		//Update the style of the image for the previous active menu item
+		var menuItems = document.getElementsByClassName("m-item"); // Get all the elements with class="m-item" inside the secondary menu
+		for (var i = 0; i < menuItems.length; i++) {
+			if(menuItems[i].src != target.src)
+			{
+				//Set to default the border style of the item by removing the class "selected"
+				menuItems[i].classList.remove("selected");
+				//Update the content of the text-container depending on the menu item selected
+				contents[i].style.display="none";
+			}
+			else {
+				//Add the corresponding class to change the border style set for the selected item
+				menuItems[i].classList.add("selected");
+				contents[i].style.display="block";
+			}
+		}
+	}
 
 
 /*************FINNNNNNNNNNNNNNNNNNNNNNNNNN*****************************************************/
