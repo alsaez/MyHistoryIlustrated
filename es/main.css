@@ -1,0 +1,21 @@
+.menu-bar a:nth-child(1)::after{
+  content: "Inicio" !important;
+}
+
+.menu-bar a:nth-child(2)::after{
+  content: "Sobre mi" !important;
+}
+
+.menu-bar a:nth-child(3)::after{
+  content: "Trabajo" !important;
+}
+
+.menu-bar a:nth-child(4)::after{
+  content: "Contacto" !important;
+}
+
+#en{ opacity: 0.6;  z-index: 10;  cursor:pointer; }
+
+#es{  opacity: 1;  z-index: 20;  cursor: default; }
+
+#en:hover{  opacity: 1;  z-index: 30;  }

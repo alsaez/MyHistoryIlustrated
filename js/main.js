@@ -14,6 +14,9 @@ var captionText = document.getElementById("caption"); // Get the Modal caption
 var span = document.getElementsByClassName("close")[0]; // Get the <span> element that closes the modal
 var mainMenu = document.getElementById("main-menu"); // Get the main menu to display none in modal state
 var secondaryMenu = document.getElementById("small-menu"); // Get the secondary menu to display none in modal state
+var language = document.getElementsByTagName('html')[0].getAttribute('lang'); // Get the DOMs lang attribute value
+var contactMenuItem = document.getElementById("contact-ref"); // Get the contact menu item pointer
+var clientInput = document.getElementById("fullName"); // Get the Form fullName Input field
 
 /***************Function for Slider**********************************************************/
 function updateSlider()
@@ -27,8 +30,12 @@ function updateSlider()
 			current = 0;
 		}
 	  sliderDiv.src = ilList[current].children[0].firstElementChild.src;
+		if (language=="es") {
+		sliderDiv.alt = "PROYECTO: " + ilList[current].children[0].children[1].children[0].innerHTML + "." + "<br>" +"Utilizados " + ilList[current].children[0].children[1].children[1].innerHTML+" ...";
+		}
+		else{
 		sliderDiv.alt = "PROJECT: " + ilList[current].children[0].children[1].children[0].innerHTML + "." + "<br>" +"Used " + ilList[current].children[0].children[1].children[1].innerHTML+" ...";
-
+	  }
 		var myElem = document.getElementsByClassName("active");
 		if(myElem.length!=0) myElem[0].classList.remove("active");
 		ilList[current].classList.add("active");
@@ -120,5 +127,11 @@ secondaryMenu.onclick = function(event) {
 		}
 	}
 
+
+/******************* FUNCTION TO FOCUS INPUT IN CONTACT SECTION WHEN EVENT OCCURS*******************/
+
+contactMenuItem.onclick = function(event) {
+	clientInput.focus();
+}
 
 /*************FINNNNNNNNNNNNNNNNNNNNNNNNNN*****************************************************/
