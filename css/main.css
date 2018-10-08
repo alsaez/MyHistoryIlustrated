@@ -254,12 +254,15 @@ header{  height: 360px;       }
   margin: 0; margin-bottom: 10px;  padding: 0;
 }
 
+#first-row  .first-column  img{
+  margin: auto; padding: 0;  }
+
 #first-row  .second-column{ flex: 1 1 auto; display: flex; flex-direction: row;  flex-wrap:nowrap;  align-items: flex-start; justify-content: flex-start;
   width: 100%;  margin: 0 5px;  padding: 0 5px;
 }
 
 #first-row  .second-column  p{
-  margin: 0; margin-left: 10px; padding: 0;   font-family:  var(--main-ft); font-size: var(--small-font);  font-weight: 500;  line-height: 140%; letter-spacing: 1px;  word-spacing: 1px;  text-align:left;
+  margin: auto; margin-left: 10px; padding: 0;   font-family:  var(--main-ft); font-size: var(--small-font);  font-weight: 500;  line-height: 140%; letter-spacing: 1px;  word-spacing: 1px;  text-align:left;
 }
 
 #first-row  .second-column img{
@@ -765,7 +768,17 @@ header{  height: 360px;       }
 }
 
 /* Responsive font-size on Smaller Screens **/
-@media only screen and (max-width: 830px){
+@media only screen and (max-width: 830px) and (orientation: portrait){
+
+  html {
+    transform: rotate(-90deg);
+    transform-origin: left top;
+    width: 100vh;
+    overflow-x: hidden;
+    position: absolute;
+    top: 100%;
+    left: 0;
+  }
 
   /********* Header *******************/
 
@@ -789,7 +802,7 @@ header{  height: 360px;       }
 
   #ab-content{  margin-top: 8px;  margin-bottom: 3px; }
   #ab-img-side{  background: url(../img/photos/s-photo-desk.png);  background-size: cover; background-repeat: no-repeat;  background-position: center;  }
-  #small-cv p{ font-size: 9px !important;  margin-left: 8px !important;  }
+  #small-cv p{ font-size: 9px !important;  margin-top: auto;   margin-left: 8px !important;  }
   #first-row .second-column a img{ width:35px;  height:35px;  }
   #second-row{  margin: 2px 0; }
   #second-row .first-column a img{ width:33px;  height:33px;  }
